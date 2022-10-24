@@ -9,9 +9,11 @@ namespace Overtake
             // This example fetches and prints the first 10 data items
             for (var i = 0; i < 5; i++)
             {
-                //Library.Overtake.SetRandomAsRepeatable(false);
+                Library.Overtake.SetRandomAsRepeatable(false); //Ensures a different set of data is generated each time. Set to true to make the generated data static
                 var overtake = Library.Overtake.GetNextOvertake();
-                //Console.WriteLine($"{overtake.ToString()}\n");
+                //Console.WriteLine($"{overtake.ToString()}\n"); //Output all data without formatting
+
+                //Output data WITH formatting:
                 Console.WriteLine($"InitialSeparation = {overtake.InitialSeparationM:F1} metres");
                 Console.WriteLine($"OvertakingSpeed = {overtake.OvertakingSpeedMPS:F1} m/s");
                 Console.WriteLine($"OncomingSpeed = {overtake.OncomingSpeedMPS:F1} m/s");
